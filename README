@@ -1,0 +1,83 @@
+NUME: IONITA ALEXANDRA-MIHAELA
+
+						Tema 3
+				Structuri de Date si Algoritmi
+
+Funcții folosite
+
+Funcția ReadMap()
+Această funcție primește ca argumente un fișier de intrare și returnează o
+structură de date TGL* care reprezintă harta citită din fișier. Harta este
+reprezentată sub forma unui graf neorientat, iar funcția citește numărul de 
+noduri și arce din fișier, alocă memorie pentru structura de date a hărții 
+și adaugă conexiunile între noduri.
+
+Funcția Insert_Connection()
+Această funcție primește ca argumente două noduri (dest și src) și un cost, 
+și adaugă o conexiune între acestea în harta dată. Funcția verifică dacă 
+nodurile există deja în hartă și, în caz contrar, le adaugă în hartă înainte 
+de a crea conexiunea.
+
+Funcția Insert_Head()
+Această funcție primește ca argumente un nod (head), un index de nod și o 
+locație, și adaugă un nou nod la începutul listei de adiacență a nodului dat. 
+Funcția alocă memorie pentru numele locației și îl adaugă în nodul nou creat.
+
+Funcția AlocG()
+Această funcție primește ca argumente numărul de noduri și alocă spațiu pentru 
+o structură de date TGL* care reprezintă un graf. Funcția alocă memorie pentru 
+descriptorul de graf și pentru vectorul de adrese ale listelor de arce.
+
+Funcția free_list()
+Această funcție primește ca argumente o listă de arce și eliberează memoria ocupată 
+de această listă.
+
+Funcția Distroy_Map()
+Această funcție primește ca argumente o structură de date TGL* reprezentând harta 
+și eliberează memoria ocupată de această structură și de listele de adiacență.
+
+Funcția DFS()
+Această funcție primește ca argumente o structură de date TGL* reprezentând harta, 
+un nod și un vector de vizitare. Funcția parcurge graful în adâncime pornind de 
+la nodul dat și marchează nodurile vizitate în vectorul de vizitare.
+
+Funcția Componente_conexe()
+Această funcție primește ca argumente o structură de date TGL* reprezentând harta 
+și un pointer la un pointer la un vector componente_conexe. Funcția determină 
+numărul de componente conexe din graf și stochează nodurile reprezentative pentru 
+fiecare componentă conexă în vectorul componente_conexe. Funcția returnează numărul 
+de componente conexe.
+
+Funcția AlocCelula()
+Această funcție primește ca argumente un arc și alocă memorie pentru o celulă în 
+coada de priorități. Funcția returnează adresa noii celule alocate.
+
+Funcția Distroy_pq()
+Această funcție primește ca argumente un pointer la coada de priorități și 
+eliberează memoria ocupată de această coadă.
+
+Funcția InsertSorted()
+Această funcție primește ca argumente un pointer la coada de priorități și un 
+arc și inserează elementul în coadă în ordine crescătoare după cost. Funcția 
+returnează pointer-ul la coada de priorități actualizată.
+
+Funcția addEdges()
+Această funcție primește ca argumente un nod, un pointer la un vector de vizitare 
+și un pointer la coada de priorități. Funcția marchează nodul ca fiind vizitat și 
+adaugă toate nodurile adiacente în coada de priorități în ordine crescătoare.
+
+Funcția Lazy_prim()
+Această funcție primește ca argumente o structură de date TGL* reprezentând harta 
+și un nod de start. Funcția aplică algoritmul lui Prim pentru a determina costul 
+minim al arborelui de acoperire folosind lazy Prim. Funcția returnează costul total minim.
+
+Funcția dequeue()
+Această funcție primește ca argumente un pointer la coada de priorități și o 
+structură de date TGL* reprezentând harta. Funcția elimină primul element din 
+coada de priorități și elimină din coadă toate nodurile adiacente cu nodul eliminat.
+
+Funcția Cost_Total_Minim()
+Această funcție primește ca argumente o structură de date TGL* reprezentând 
+harta, un vector de componente conexe și numărul de componente conexe. 
+Funcția determină costul total minim pentru fiecare componentă conexă a grafului 
+și scrie rezultatele într-un fișier de ieșire.
